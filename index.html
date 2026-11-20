@@ -154,6 +154,11 @@ th{background:#fafbfd;color:var(--muted)}
   padding:.5mm 1mm;font-size:7.5pt;line-height:1.1;border-bottom:.2mm solid #bbb
  }
  .print-total{text-align:right;font-size:10pt;font-weight:bold;margin-top:auto}
+ .print-cut-line{
+ width:100%;
+ border-top:1px dashed #000;
+ margin-top:2mm;
+}
 
  .ledger-print-page{
   width:210mm;min-height:297mm;height:297mm;padding:12mm 13mm;
@@ -1112,6 +1117,7 @@ function printJobs(ids){
      <tbody>${job.items.map(item=>`<tr><td>${escapeHTML(item.name)}</td><td>${money(item.price)}</td></tr>`).join("")}</tbody>
     </table>
     <div class="print-total">সর্বমোট: ${money(job.total)} | আদায়: ${money(job.paid)} | বকেয়া: ${money(job.due)}</div>
+    <div class="print-cut-line"></div>
    </div>
   </div>`).join("");
  setTimeout(()=>window.print(),300);
