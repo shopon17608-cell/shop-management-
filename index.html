@@ -24,7 +24,19 @@ button{cursor:pointer}
  padding:20px;background:linear-gradient(135deg,#101d36,#294a79)
 }
 .login-box{width:100%;max-width:420px;padding:32px;background:white;border-radius:18px;box-shadow:0 20px 60px #0003}
-.login-logo{width:55px;height:55px;background:var(--blue);color:white;border-radius:14px;display:grid;place-items:center;font-size:27px;margin-bottom:18px}
+.login-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.login-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .login-box h2{margin:0 0 5px}
 .login-box p{color:var(--muted)}
 .notice{background:#fff6df;color:#795617;padding:12px;border-radius:9px;font-size:13px;margin-top:16px}
@@ -189,7 +201,9 @@ th{background:#fafbfd;color:var(--muted)}
 
 <div id="loginScreen">
  <div class="login-box">
-  <div class="login-logo">🖥</div>
+  <div class="login-logo">
+    <img src="my-logo.png" alt="My Logo">
+</div>
   <h2 id="loginTitle">স্বাগতম</h2>
   <p id="loginDescription">আপনার লোকাল অ্যাকাউন্টে প্রবেশ করুন</p>
   <form id="loginForm">
